@@ -153,14 +153,14 @@ select {
 
 .grid-container {
     text-align: center;
-    border: 5px solid limegreen;
     display: grid;
     place-items: center;
     padding-inline: 1rem;
+
 }
 
 .grid-container * {
-    max-width: 45ch;
+    max-width: 50ch;
 }
 
 @media (min-width: 45em) {
@@ -172,19 +172,18 @@ select {
     
     .grid-container > *:first-child {
         grid-column: 2;
-        /* outline: 1px solid red; */
     }
 
     .grid-container > *:last-child {
         grid-column: 3;
-        /* outline: 1px solid yellow; */
     }
-
+    
     .grid-container--home {
-        padding-bottom: max(6rem, 20vw);
+        padding-bottom: max(6rem, 20vh);
         align-items: end;
     }
 }
+
 
 .sr-only {
   position: absolute; 
@@ -338,4 +337,30 @@ select {
 
 .dot-indicators > [aria-selected="true"] {
     background-color: hsl( var(--clr-white) / 1); 
+}
+
+
+/* --------------------------------- */
+/* Page specific background       */
+/* -------------------------------- */
+body {
+    background-size: cover;
+    background-position: bottom center;
+}
+/* home */
+
+.home {
+    background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+    .home {
+        background-image: url(./assets/home/background-home-tablet.jpg);
+    }
+}
+
+@media (min-width: 45rem) {
+    .home {
+        background-image: url(./assets/home/background-home-desktop.jpg);
+    }
 }
