@@ -288,15 +288,17 @@ select {
     list-style: none;
     padding: 0;
     margin: 0;
+    background: hsl( var(--clr-white) / 0.0);
+    /* -webkit-backdrop-filter: blur(10px); */
+	backdrop-filter: blur(1.5rem);
 }
 
 @media (max-width: 35rem) {
     .primary-navigation {
-        --underline-gap: 1.5rem;
+        --underline-gap: .5rem;
         position: fixed;
         z-index: 1000;
         inset: 0 0 0 30%;
-        background: black;
         list-style: none;
         padding: min(20rem, 15vh) 2rem;
         margin: 0;
