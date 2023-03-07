@@ -284,11 +284,28 @@ select {
 }
 
 .primary-navigation {
-    --gap: 8rem;
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+@media (max-width: 35rem) {
+    .primary-navigation {
+        --underline-gap: 1.5rem;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        background: black;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .primary-navigation.underline-indicators > .active {
+        border: 0;
+    }
 }
 
 .primary-navigation a {
@@ -340,21 +357,21 @@ select {
 }
 
 
-/* --------------------------------- */
-/* Page specific background       */
-/* -------------------------------- */
+/* ----------------------------- */
+/* Page specific background      */
+/* ----------------------------- */
 body {
     background-size: cover;
     background-position: bottom center;
 }
 /* home */
-
 .home {
     background-image: url(./assets/home/background-home-mobile.jpg);
 }
 
 @media (min-width: 35rem) {
     .home {
+        background-position: center center;
         background-image: url(./assets/home/background-home-tablet.jpg);
     }
 }
@@ -363,4 +380,4 @@ body {
     .home {
         background-image: url(./assets/home/background-home-desktop.jpg);
     }
-}
+} 
