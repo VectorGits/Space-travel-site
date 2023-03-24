@@ -463,14 +463,14 @@ body {
 }
 
 @media (min-width: 35rem) {
-    .home {
+    .destination {
         background-position: center center;
         background-image: url(./assets/destination/background-destination-tablet.jpg);
     }
 }
 
 @media (min-width: 45rem) {
-    .home {
+    .destination {
         background-image: url(./assets/destination/background-destination-desktop.jpg);
     }
 } 
@@ -481,15 +481,15 @@ body {
 }
 
 @media (min-width: 35rem) {
-    .home {
+    .crew {
         background-position: center center;
         background-image: url(./assets/crew/background-crew-tablet.jpg);
     }
 }
 
 @media (min-width: 45rem) {
-    .home {
-        background-image: url(./assets/home/background-home-desktop.jpg);
+    .crew {
+        background-image: url(./assets/crew/background-crew-desktop.jpg);
     }
 } 
 
