@@ -44,6 +44,7 @@ function changeTabFocus(e) {
 function changeTabPanel(e) {
     const targetTab = e.target;
     const targetPanel = targetTab.getAttribute('aria-controls');
+    const targetImage = targetTab.getAttribute('data-image');
 
     const tabContainer = targetTab.parentNode;
     const mainContainer = tabContainer.parentNode;
@@ -51,9 +52,22 @@ function changeTabPanel(e) {
     mainContainer
         .querySelectorAll('[role="tabpanel"]')
         .forEach((panel) => panel.setAttribute('hidden', true));
-    
-    mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
+        
+        mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
+        
+        
+        // console.log(mainContainer); // This is the id of the panel that needs to be shown
+        // console.log(targetPanel); // This is the id of the panel that needs to be shown
+        // console.log(targetTab); // This is the tab that was clicked
+        // console.log(tabContainer); // This is the tablist
+        // console.log(mainContainer); // This is the main container
 
-
-    // console.log(mainContainer); // This is the id of the panel that needs to be shown
-}
+        // Hide all the images
+        mainContainer
+        .querySelectorAll('picture')
+            .forEach((pic) => pic.setAttribute('hidden', true));
+            
+            
+            mainContainer.querySelector([`#${targetImage}`]).removeAttribute('hidden');
+            
+    }
